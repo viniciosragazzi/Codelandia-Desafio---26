@@ -1,0 +1,495 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #da2535;
+  --gray: #616161;
+  --white: #fbfbfb;
+  --white-200: #f3f3f3;
+  --black: #292929;
+  --xsSize: 1.2rem;
+  --sSize: 1.4rem;
+  --smSize: 1.8rem;
+  --mdSize: 2.2rem;
+  --lgSize: 2.8rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logo,
+.title,
+.preco,
+.card_txt_title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  font-size: var(--mdSize);
+  font-weight: 600;
+}
+
+.descricao {
+  font-size: var(--sSize);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+body .app {
+  overflow: hidden;
+}
+body a {
+  text-decoration: none;
+  color: var(--black);
+}
+body .logo {
+  font-size: var(--smSize);
+  font-weight: 700;
+}
+body .logo span {
+  color: var(--red);
+}
+body .container {
+  display: flex;
+  padding: 2.4rem;
+}
+body .card {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+body header {
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+body header .button {
+  font-weight: 600;
+  padding: 0.8rem 3rem;
+  border: var(--black) 2px solid;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+}
+body header .button:hover {
+  background-color: var(--red);
+  color: var(--white);
+  border: var(--white) 2px solid;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--smSize);
+  gap: 8rem;
+  z-index: 40;
+}
+body header nav ul {
+  display: flex;
+  gap: 3rem;
+  font-weight: 500;
+}
+body header nav ul li {
+  cursor: pointer;
+}
+body header nav ul li a {
+  transition: all 0.4s;
+}
+body header nav ul li:hover a {
+  color: var(--red) !important;
+  font-weight: 500;
+}
+body header .burgerBtn {
+  width: var(--smSize);
+  overflow: hidden;
+  z-index: 50;
+  cursor: pointer;
+  display: block;
+}
+body header .burgerBtn .line {
+  width: 100%;
+  height: 2px;
+  margin: 2px 0;
+  background-color: var(--black);
+}
+body header .burgerBtn .line:nth-child(even) {
+  margin-left: 2px;
+}
+body main {
+  overflow-x: hidden;
+}
+body main section.topSection {
+  display: flex;
+}
+body main section.topSection .area_section_principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+body main section.topSection .area_section_principal_text {
+  display: grid;
+  gap: 2rem;
+  padding-right: 3rem;
+}
+body main section.topSection .area_section_principal .button {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.6rem;
+  background-color: var(--red);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--sSize);
+  max-width: 32rem;
+}
+body main section.secSection {
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 5.6rem;
+}
+body main section.secSection .secSection_img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+body main section.secSection .secSection_img img {
+  width: 100%;
+  height: 100%;
+}
+body main section.secSection .secSection_txt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--mdSize);
+}
+body main section.secSection .secSection_txt h2 {
+  color: var(--black);
+}
+body main section.secSection .secSection_txt p {
+  color: var(--black);
+}
+body main section.secSection .secSection_txt .link {
+  font-size: var(--sSize);
+  color: #da2535;
+  text-decoration: underline;
+  font-weight: 500;
+}
+body main section.terSection {
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5.6rem;
+}
+body main section.terSection .terSection_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+body main section.terSection .terSection_cards .card {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--white-200);
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 1rem;
+}
+body main section.terSection .terSection_cards .card .imgCard {
+  width: 80%;
+  display: flex;
+  position: relative;
+  top: -3rem;
+  justify-content: center;
+}
+body main section.terSection .terSection_cards .card .imgCard img {
+  max-height: 80% !important;
+}
+body main section.terSection .terSection_cards .card .card_txt {
+  position: relative;
+  top: -2rem;
+  display: grid;
+  gap: 1.2rem;
+}
+body main section.terSection .terSection_cards .card .card_txt h3 {
+  font-size: var(--mdSize);
+  font-weight: 500;
+  color: var(--black);
+}
+body main section.terSection .terSection_cards .card .card_txt p {
+  font-size: var(--sSize);
+  color: var(--black);
+}
+body main section.terSection .terSection_cards .card .card_txt span {
+  font-size: var(--lgSize);
+  color: var(--black);
+}
+body main section.quarSection {
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+body main section.quarSection .quarSection_cards {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+body main section.quarSection .quarSection_cards .card {
+  background-color: var(--white-200);
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  display: grid;
+  gap: 1.4rem;
+}
+body main section.quarSection .quarSection_cards .card .card_img img {
+  max-width: 6rem;
+}
+body main section.quarSection .quarSection_cards .card .card_txt {
+  display: grid;
+  gap: 1.6rem;
+}
+body main section.quarSection .quarSection_cards .card .card_txt h3 {
+  font-weight: 500;
+  font-size: var(--smSize);
+}
+body main section.quarSection .quarSection_cards .card .card_txt p {
+  font-size: var(--sSize);
+}
+body main section.quarSection .quarSection_cards .card .card_stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+body main section.quinSection {
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+body main section.quinSection .quinSection_mapa {
+  width: 100%;
+  height: 100%;
+}
+body main section.quinSection .quinSection_mapa img {
+  width: 100%;
+  height: 100%;
+}
+body main section.quinSection .quinSection_input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray);
+  min-height: 4rem;
+  padding-left: 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+body main section.quinSection .quinSection_input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 1rem;
+  outline: none;
+  font-size: 12px;
+  position: relative;
+}
+body main section.quinSection .quinSection_input input::-moz-placeholder {
+  color: var(--black);
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+body main section.quinSection .quinSection_input input:-ms-input-placeholder {
+  color: var(--black);
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+}
+body main section.quinSection .quinSection_input input::placeholder {
+  color: var(--black);
+  transition: all 0.4s;
+}
+body main section.quinSection .quinSection_input input:focus::-moz-placeholder {
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+body main section.quinSection .quinSection_input input:focus:-ms-input-placeholder {
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+body main section.quinSection .quinSection_input input:focus::placeholder {
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+body main section.quinSection .quinSection_input .searchIconArea {
+  background-color: var(--red);
+  height: 100%;
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.4rem;
+}
+body main section.quinSection .quinSection_input .searchIconArea svg {
+  color: white;
+}
+body footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+body footer .footerItens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.6rem;
+}
+body footer .footerItens .footerItem {
+  display: grid;
+  gap: 0.8rem;
+}
+body footer .footerItens .footerItem .titleItem {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--sSize);
+  padding-bottom: 0.5rem;
+}
+body footer .footerItens .footerItem .info {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--xsSize);
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  body html {
+    font-size: 60% !important;
+  }
+}
+@media screen and (min-width: 580px) {
+  body main section.secSection {
+    flex-direction: row;
+    align-items: center;
+  }
+  body main section.secSection .secSection_txt {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 580px) {
+  body main section.terSection .terSection_cards {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+  body main section.terSection .terSection_cards .card {
+    padding-bottom: 3rem !important;
+  }
+  body main section.terSection .terSection_cards .lastCard {
+    transform: translateX(0%) !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  body header.menuOpen nav,
+body header.menuOpen .deslise {
+    transform: translateX(0);
+  }
+  body header .deslise {
+    position: absolute;
+    transform: translateX(-200%);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    transition: 0.2s ease transform;
+    top: 0;
+    left: 0;
+  }
+  body header nav {
+    position: absolute !important;
+    transform: translateX(-200%);
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--white-200);
+    transition: 0.5s ease transform;
+  }
+  body header nav ul {
+    flex-direction: column;
+  }
+  body section.topSection .area_section_img {
+    display: none;
+  }
+  body main section.secSection .secSection_img img {
+    max-width: 26rem !important;
+  }
+  body main section.terSection .terSection_cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  body main section.terSection .terSection_cards .lastCard {
+    transform: translateX(50%);
+  }
+}
+@media screen and (min-width: 768px) {
+  body nav {
+    font-size: var(--sSize) !important;
+  }
+  body header .burgerBtn {
+    display: none !important;
+  }
+  body .container {
+    padding: 2.4rem 6rem !important;
+    justify-content: center;
+    gap: 8rem;
+  }
+  body body header {
+    gap: 6rem;
+  }
+  body body header a.logo {
+    font-size: var(--lgSize) !important;
+  }
+  body section.topSection .area_section_principal {
+    max-width: 40rem;
+  }
+  body section.topSection .area_section_principal .button {
+    align-self: start !important;
+    width: 50%;
+  }
+  body section.topSection .area_section_img img {
+    max-width: 20rem;
+  }
+  body main section.terSection .terSection_cards .card .imgCard img {
+    width: 80% !important;
+  }
+  body .card {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  body .card_txt h3 {
+    font-size: var(--smSize) !important;
+  }
+  body .card_txt span {
+    font-size: var(--mdSize) !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .container {
+    padding: 2.4rem 18rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body .container {
+    padding: 2.4rem 30rem !important;
+  }
+}/*# sourceMappingURL=App.css.map */
