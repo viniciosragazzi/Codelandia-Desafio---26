@@ -1,5 +1,5 @@
 import { Star } from "phosphor-react";
-import React from "react";
+import React from "react"; // eslint-disable-line no-unused-vars
 import profile1 from "../assets/profile1.png";
 import profile2 from "../assets/profile2.png";
 export default function Comentarios() {
@@ -15,14 +15,14 @@ export default function Comentarios() {
             <h3 className="card_txt_title">Daniele Almeida</h3>
             <p className="card_txt_desc">
               Ótimo serviço! Encantada com a qualidade dos pratos.
-            </p>
+            </p> 
           </div>
           <div className="card_stars">
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
           </div>
         </div>
         <div className="card">
@@ -37,11 +37,11 @@ export default function Comentarios() {
             </p>
           </div>
           <div className="card_stars">
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
-            <Star size={20} weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
+            <Star  weight="fill" color="#da2535" />
           </div>
         </div>
       </div>

@@ -172,6 +172,7 @@ body main section.secSection .secSection_img {
 body main section.secSection .secSection_img img {
   width: 100%;
   height: 100%;
+  max-width: 347px;
 }
 body main section.secSection .secSection_txt {
   display: flex;
@@ -283,6 +284,7 @@ body main section.quinSection {
   text-align: center;
   flex-direction: column;
   gap: 2.4rem;
+  align-items: center;
 }
 body main section.quinSection .quinSection_mapa {
   width: 100%;
@@ -295,6 +297,7 @@ body main section.quinSection .quinSection_mapa img {
 body main section.quinSection .quinSection_input {
   width: 100%;
   display: flex;
+  max-width: 42rem;
   align-items: center;
   border: 1px solid var(--gray);
   min-height: 4rem;
@@ -440,8 +443,14 @@ body header.menuOpen .deslise {
   body main section.terSection .terSection_cards .lastCard {
     transform: translateX(50%);
   }
+  body .card_stars svg {
+    font-size: 2rem !important;
+  }
 }
 @media screen and (min-width: 768px) {
+  body .title {
+    font-size: var(--lgSize);
+  }
   body nav {
     font-size: var(--sSize) !important;
   }
@@ -482,6 +491,28 @@ body header.menuOpen .deslise {
   body .card_txt span {
     font-size: var(--mdSize) !important;
   }
+  body .quarSection {
+    gap: 1rem !important;
+    text-align: start !important;
+  }
+  body main section.quarSection .quarSection_cards {
+    flex-direction: row;
+  }
+  body main section.quarSection .quarSection_cards .card {
+    min-width: 35rem;
+    text-align: start !important;
+    padding-left: 2.5rem !important;
+    padding-right: 8rem !important;
+  }
+  body main section.quarSection .quarSection_cards .card .card_stars {
+    justify-self: flex-start;
+  }
+  body main section.quarSection .quarSection_cards .card .card_stars svg {
+    font-size: 1.4rem !important;
+  }
+  body .quinSection h2 {
+    align-self: flex-start;
+  }
 }
 @media screen and (min-width: 1024px) {
   body .container {
@@ -490,6 +521,6 @@ body header.menuOpen .deslise {
 }
 @media screen and (min-width: 1280px) {
   body .container {
-    padding: 2.4rem 30rem !important;
+    padding: 2.4rem 20rem !important;
   }
 }/*# sourceMappingURL=App.css.map */

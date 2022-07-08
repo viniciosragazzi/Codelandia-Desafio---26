@@ -173,6 +173,7 @@ body {
           img {
             width: 100%;
             height: 100%;
+            max-width: 347px;
           }
         }
         .secSection_txt {
@@ -194,7 +195,7 @@ body {
           }
         }
       }
-
+      //Top
       &.terSection {
         text-align: center;
         justify-content: center;
@@ -298,6 +299,7 @@ body {
         text-align: center;
         flex-direction: column;
         gap: 2.4rem;
+        align-items: center;
         .quinSection_mapa {
           width: 100%;
           height: 100%;
@@ -310,7 +312,7 @@ body {
         .quinSection_input {
           width: 100%;
           display: flex;
-
+          max-width: 42rem;
           align-items: center;
           border: 1px solid var(--gray);
           min-height: 4rem;
@@ -444,6 +446,7 @@ body {
           flex-direction: column;
         }
       }
+     
     }
     section {
       &.topSection {
@@ -462,8 +465,18 @@ body {
         transform: translateX(50%);
       }
     }
+    .card_stars{
+
+
+      svg{
+        font-size: 2rem !important;
+      }
+    }
   }
   @media screen and (min-width: 768px) {
+    .title{
+      font-size: var(--lgSize);
+    }
     nav {
       font-size: var(--sSize) !important;
     }
@@ -514,6 +527,33 @@ body {
         font-size: var(--mdSize) !important;
       }
     }
+    .quarSection{
+      gap: 1rem !important;
+      text-align: start !important;
+    }
+     main section.quarSection .quarSection_cards {
+      flex-direction: row;
+     
+      .card{
+        min-width: 35rem;
+        text-align: start !important;
+        padding-left: 2.5rem !important;
+        padding-right: 8rem !important;
+
+        .card_stars{
+          justify-self: flex-start;
+
+          svg{
+            font-size: 1.4rem !important;
+          }
+        }
+      }
+    }
+    .quinSection{
+      h2{
+        align-self: flex-start ;
+      }
+    }
   }
 
   @media screen and (min-width: 1024px) {
@@ -524,7 +564,7 @@ body {
 
   @media screen and (min-width: 1280px) {
     .container {
-      padding: 2.4rem 30rem !important;
+      padding: 2.4rem 20rem !important;
     }
   }
 }
